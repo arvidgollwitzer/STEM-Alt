@@ -1,0 +1,5 @@
+name: gpt4o
+model_version: gpt-4o-2024-11-20
+temperature: 0.0
+max_tokens: 1024
+prompt_name: P2

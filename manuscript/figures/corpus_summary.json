@@ -1,0 +1,11 @@
+{
+  "n_figures": 30,
+  "n_domains": 4,
+  "n_eth_categories": 4,
+  "n_diagram_types": 9,
+  "n_licences": 5,
+  "n_decorative_empty_alt": 4,
+  "short_alt_bound": 125,
+  "short_alt_violations": [],
+  "matches_manuscript_table1": true
+}

@@ -1,0 +1,5 @@
+name: llava_next_7b
+base_model_id: llava-hf/llava-v1.6-mistral-7b-hf
+lora_path: null            # set after the first DPO round
+max_new_tokens: 512
+device: cuda

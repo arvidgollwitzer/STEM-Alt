@@ -1,0 +1,30 @@
+% Theme package hints for this table (add in your preamble):
+% \usepackage{booktabs}
+% \usepackage{multirow}
+% \usepackage[table]{xcolor}
+% \usepackage{diagbox}
+% \usepackage{makecell}
+% \usepackage{adjustbox}
+% \usepackage{amssymb}
+% \usepackage{pifont}
+\setlength{\heavyrulewidth}{1.0pt}
+\setlength{\lightrulewidth}{0.5pt}
+\setlength{\arrayrulewidth}{0.5pt}
+\setlength{\aboverulesep}{0pt}
+\setlength{\belowrulesep}{0pt}
+\begin{table}[htbp]
+\centering
+\caption{Held-out evaluation corpus, stratified by STEM domain and ETH alt-text category. Cells give the count of figures.}
+\label{tab:corpus}
+\begin{tabular}{lccccc}
+\toprule
+Domain & Simple & Linked & Decorative & Complex & Total \\
+\midrule
+Chemistry & 2 & 2 & 1 & 3 & 8 \\
+Mathematics and CS & 2 & 2 & 1 & 3 & 8 \\
+Biology & 1 & 2 & 1 & 3 & 7 \\
+Physics & 1 & 2 & 1 & 3 & 7 \\
+Total & 6 & 8 & 4 & 12 & 30 \\
+\bottomrule
+\end{tabular}
+\end{table}

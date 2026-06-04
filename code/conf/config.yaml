@@ -1,0 +1,25 @@
+# STEM-Alt — top-level Hydra config.
+# Selected defaults compose subgroup configs from `conf/<group>/<name>.yaml`.
+# All sub-configs are immutable at runtime (Hydra strict mode).
+defaults:
+  - _self_
+  - corpus: default
+  - generator: gpt4o
+  - critic: llava_next
+  - loop: default
+  - training: dpo
+  - evaluation: default
+
+project_name: stem-alt
+seed: 42
+output_dir: outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}
+
+logging:
+  level: INFO
+
+hydra:
+  run:
+    dir: ${output_dir}
+  sweep:
+    dir: outputs/sweep/${now:%Y-%m-%d}/${now:%H-%M-%S}
+    subdir: ${hydra.job.num}

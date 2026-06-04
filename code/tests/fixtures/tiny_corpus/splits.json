@@ -1,0 +1,16 @@
+{
+  "calibration": [
+    "tiny_chem_complex_a",
+    "tiny_chem_simple_a",
+    "tiny_phys_complex_a",
+    "tiny_phys_simple_b"
+  ],
+  "held_out": [
+    "tiny_chem_complex_b",
+    "tiny_chem_simple_b",
+    "tiny_phys_complex_b",
+    "tiny_phys_simple_a"
+  ],
+  "n_calibration": 4,
+  "n_held_out": 4
+}

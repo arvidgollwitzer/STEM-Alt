@@ -1,0 +1,9 @@
+figure_id,source_url,licence,domain,eth_category,diagram_type,expert_reference_description,short_alt,context_paragraph,image_path,split
+tiny_chem_simple_a,test://a,CC-BY-4.0,chemistry,simple,Chemistry,"Reference description for a simple chemistry figure.","Simple chem A","Context paragraph A.",tests/fixtures/tiny_corpus/img/a.png,calibration
+tiny_chem_simple_b,test://b,CC-BY-4.0,chemistry,simple,Chemistry,"Reference description for a simple chemistry figure.","Simple chem B","Context paragraph B.",tests/fixtures/tiny_corpus/img/b.png,calibration
+tiny_chem_complex_a,test://c,CC-BY-4.0,chemistry,complex,Graphs,"Reference description for a complex chemistry figure.","Complex chem A","Context paragraph C.",tests/fixtures/tiny_corpus/img/c.png,calibration
+tiny_chem_complex_b,test://d,CC-BY-4.0,chemistry,complex,Graphs,"Reference description for a complex chemistry figure.","Complex chem B","Context paragraph D.",tests/fixtures/tiny_corpus/img/d.png,calibration
+tiny_phys_simple_a,test://e,CC-BY-4.0,physics,simple,"Illustrated Diagrams","Reference description for a simple physics figure.","Simple phys A","Context paragraph E.",tests/fixtures/tiny_corpus/img/e.png,calibration
+tiny_phys_simple_b,test://f,CC-BY-4.0,physics,simple,"Illustrated Diagrams","Reference description for a simple physics figure.","Simple phys B","Context paragraph F.",tests/fixtures/tiny_corpus/img/f.png,calibration
+tiny_phys_complex_a,test://g,CC-BY-4.0,physics,complex,Graphs,"Reference description for a complex physics figure.","Complex phys A","Context paragraph G.",tests/fixtures/tiny_corpus/img/g.png,calibration
+tiny_phys_complex_b,test://h,CC-BY-4.0,physics,complex,Graphs,"Reference description for a complex physics figure.","Complex phys B","Context paragraph H.",tests/fixtures/tiny_corpus/img/h.png,calibration

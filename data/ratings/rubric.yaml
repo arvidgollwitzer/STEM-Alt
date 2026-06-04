@@ -1,0 +1,68 @@
+# STEM-Alt five-dimension rubric.
+# Frozen after the 20-figure pilot. Edits after the freeze are reported
+# as protocol deviations.
+
+scale:
+  min: 1
+  max: 5
+  type: likert
+  measurement_level: interval
+
+primary_outcome:
+  name: primary_mean
+  formula: mean(D1, D2, D3)
+
+dimensions:
+  - id: D1
+    field: D1_factual_correctness
+    name: Factual correctness
+    description: >
+      Does the description correctly state what is visible in the figure?
+      1 = mostly wrong; 5 = fully correct.
+
+  - id: D2
+    field: D2_information_sufficiency
+    name: Information sufficiency
+    description: >
+      Does the description contain enough information for a screen-reader user
+      to reconstruct the figure's claim? 1 = insufficient; 5 = sufficient.
+
+  - id: D3
+    field: D3_domain_accuracy
+    name: Domain accuracy
+    description: >
+      Are technical terms used correctly within the figure's scientific domain?
+      1 = wrong domain usage; 5 = correct domain usage.
+
+  - id: D4
+    field: D4_hallucination
+    name: Hallucination
+    description: >
+      Does the description add content that is not visible in the figure?
+      1 = many fabricated claims; 5 = no invented content.
+
+  - id: D5
+    field: D5_conciseness
+    name: Conciseness
+    description: >
+      Does the description follow the DIAGRAM length guidance for its
+      figure category (short alt at most 125 characters for simple/linked,
+      long description for complex)?
+      1 = wildly off length; 5 = on guidance.
+
+rater_roles:
+  - id: domain_expert
+    description: Research-level fluency in the figure's STEM area.
+  - id: screen_reader_user
+    description: Reads alt-text via NVDA at standard rate before scoring.
+  - id: sighted_fallback_with_sr_experience
+    description: Disclosed fallback when screen-reader-user rater unavailable.
+
+protocol:
+  raters_per_figure: 2
+  rendering: NVDA at standard rate (live mode) or pre-rendered WAV (offline mode)
+  blinding: raters see neither the critic's scores nor the candidate's generation model
+  inter_rater_alpha_floor: 0.60   # H1-H2 Krippendorff α on the primary outcome
+                                  # (FPD pre-registered rating-quality floor)
+  c_h_alpha_threshold: 0.70       # critic-human convergence threshold
+  c_h_sustained_rounds: 2         # consecutive r required at threshold

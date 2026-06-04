@@ -1,0 +1,10 @@
+# Frozen pre-registered thresholds. Match `statistical_plan.py`.
+primary_alpha_threshold: 0.70        # C-H agreement after DPO (paper §4)
+primary_sustained_rounds: 2          # must clear threshold across 2 r in a row
+inter_rater_alpha_floor: 0.60        # H1-H2 IRR floor on primary outcome (FPD §goal)
+secondary_alpha_g1: 0.65
+secondary_alpha_g2: 0.55
+secondary_alpha_g3: 0.50
+bootstrap_resamples: 2000
+bootstrap_confidence: 0.95
+significance_level: 0.05

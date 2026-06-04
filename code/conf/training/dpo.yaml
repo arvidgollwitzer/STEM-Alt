@@ -1,0 +1,21 @@
+name: dpo
+base_model_id: llava-hf/llava-v1.6-mistral-7b-hf
+
+# LoRA adapter spec (Assumption 1 in paper section 3.5 holds because adapters
+# zero-init makes pi_C ≡ pi_ref at r = 0).
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+lora_target_modules: [q_proj, k_proj, v_proj, o_proj]
+
+# DPO hyperparameters.
+beta: 0.1
+lambda_between: 0.3
+lr: 5.0e-5
+epochs: 1
+per_device_batch: 1
+grad_accum: 8
+seed: 42
+
+# How often to fine-tune.
+calibration_step_R: 30

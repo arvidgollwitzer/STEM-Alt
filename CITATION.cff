@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use STEM-Alt, please cite it as below."
+title: "STEM-Alt: An Adversarial Generator-Critic Loop with Human-Aligned Review for STEM Alt-Text"
+abstract: >-
+  STEM-Alt is a generator, critic, and human loop that converts a small set of
+  dual human ratings into a domain-specific open-weights critic (LLaVA-Next-7B
+  with LoRA, fine-tuned by Direct Preference Optimization) that approximates
+  human judgement on STEM alt-text scoring, so the long tail of scientific
+  figures can be checked with sparse human oversight. Comprises a calibrated
+  critic checkpoint, a CC-BY corpus, and a born-accessible reference
+  implementation validated against the DIAGRAM guidelines and WCAG 2.2 SC 1.1.1.
+type: software
+authors:
+  - given-names: "Arvid E."
+    family-names: Gollwitzer
+    email: arvidg@mit.edu
+    affiliation: "Massachusetts Institute of Technology; Broad Institute of MIT and Harvard; ETH Zürich"
+repository-code: "https://github.com/arvidgollwitzer/STEM-Alt"
+url: "https://github.com/arvidgollwitzer/STEM-Alt"
+license: MIT
+version: "1.0.0"
+date-released: "2026-06-04"
+keywords:
+  - alt-text
+  - scientific figures
+  - accessibility
+  - WCAG 2.2
+  - DIAGRAM
+  - vision-language models
+  - LLM-as-judge
+  - Direct Preference Optimization
+  - screen-reader users

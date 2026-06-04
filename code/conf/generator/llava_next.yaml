@@ -1,0 +1,7 @@
+name: llava_next
+base_model_id: llava-hf/llava-v1.6-mistral-7b-hf
+model_version: llava-v1.6-mistral-7b-hf
+device: cuda
+temperature: 0.0
+max_new_tokens: 512
+prompt_name: P2

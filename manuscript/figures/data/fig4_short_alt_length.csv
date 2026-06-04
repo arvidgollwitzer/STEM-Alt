@@ -1,0 +1,31 @@
+figure_id,eth_category,short_alt,short_alt_chars,is_decorative,within_bound
+chem_simple_h2o_lewis,simple,Lewis structure of water (H2O),30,False,True
+chem_simple_methane_3d,simple,Ball-and-stick methane molecule,31,False,True
+chem_linked_periodic_table,linked,Periodic table — click an element,33,False,True
+chem_linked_ph_scale,linked,"pH scale, 0 to 14 with example anchors",38,False,True
+chem_decorative_lab_glass,decorative,,0,True,True
+chem_complex_titration_curve,complex,Weak-acid titration curve: CH3COOH with NaOH,44,False,True
+chem_complex_reaction_mechanism,complex,SN2 reaction coordinate diagram,31,False,True
+chem_complex_phase_diagram,complex,Pressure-temperature phase diagram of water,43,False,True
+mathcs_simple_unit_circle,simple,Unit circle diagram,19,False,True
+mathcs_simple_binary_tree,simple,Binary search tree (7 nodes),28,False,True
+mathcs_linked_complexity_chart,linked,Complexity comparison — linked to algorithm catalogue,53,False,True
+mathcs_linked_graph_theory,linked,Sample undirected graph — click for adjacency,45,False,True
+mathcs_decorative_chalkboard,decorative,,0,True,True
+mathcs_complex_loss_landscape,complex,"Two-parameter loss landscape, neural network",44,False,True
+mathcs_complex_finite_automaton,complex,DFA state diagram,17,False,True
+mathcs_complex_dynamic_programming,complex,LCS dynamic programming table,29,False,True
+bio_simple_cell_diagram,simple,Animal cell schematic,21,False,True
+bio_linked_taxonomy,linked,Three-domain phylogenetic tree — linked,39,False,True
+bio_linked_protein_db,linked,Haemoglobin ribbon (PDB 1GZX),29,False,True
+bio_decorative_microscope,decorative,,0,True,True
+bio_complex_genetic_pedigree,complex,"Three-generation pedigree, autosomal recessive",46,False,True
+bio_complex_signalling_pathway,complex,Insulin signalling pathway,26,False,True
+bio_complex_population_curve,complex,Logistic population growth curve,32,False,True
+phys_simple_pendulum,simple,Simple pendulum schematic,25,False,True
+phys_linked_solar_system,linked,Solar system — not to scale,27,False,True
+phys_linked_circuit_lab,linked,Series RLC circuit — linked,27,False,True
+phys_decorative_telescope,decorative,,0,True,True
+phys_complex_phase_space,complex,Damped spring oscillation (animation),37,False,True
+phys_complex_feynman_diagram,complex,Electron-positron annihilation Feynman diagram,46,False,True
+phys_complex_velocity_time,complex,"Velocity, displacement, and acceleration vs. time",49,False,True

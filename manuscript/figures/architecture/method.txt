@@ -1,0 +1,17 @@
+STEM-Alt: an adversarial generator-critic-human loop that calibrates an open-weights critic to rate STEM-figure alt-text the way human raters do. The figure is a system-overview schematic of two nested loops, flowing left to right from a figure corpus to a calibrated open-weights critic.
+
+CORPUS (input, left). 150 openly licensed STEM figures, stratified along two axes: four STEM domains (chemistry, mathematics and computer science, biology, physics) and four alt-text categories (simple, linked, decorative, complex). Partitioned once into a 120-figure calibration split (used by the loop and by fine-tuning) and a 30-figure held-out evaluation split (never fine-tuned on).
+
+GENERATOR G (frozen, closed-API). Three frontier multimodal systems: GPT-4o, Claude 3.7 Sonnet, and Gemini 2.5 Pro, prompted under P1 (generic) and P2 (WCAG-aware). G drafts candidate alt-text for a figure and is never trained.
+
+INNER LOOP (generate to critique to revise, k = 5 rounds per figure). 1) G drafts alt-text under P2. 2) Critic C scores it and returns a short critique. 3) G revises against the critique. 4) Repeat for k = 5 rounds, or until the score plateaus. A hallucination gate (rubric dimension D4 at or below 2) auto-rejects unsafe candidates inside the loop.
+
+CRITIC C (trainable, open-weights). LLaVA-Next-7B with rank-16 LoRA adapters on the attention query/key/value/output projections; the base model is frozen and only the adapters update. Given the image, the candidate alt-text, the surrounding context paragraph, and the DIAGRAM figure type, C emits five rubric scores plus a one-paragraph critique. The five rubric dimensions are: D1 factual correctness, D2 information sufficiency, D3 domain accuracy, D4 hallucination, D5 conciseness. The primary outcome is the mean of D1, D2, D3.
+
+HUMAN H (authoritative). Two raters, a domain expert and a screen-reader user (listening through NVDA), score each calibration figure on the same five-dimension rubric. Human ratings remain authoritative on the calibration split.
+
+OUTER LOOP (human to DPO calibration). Every R = 30 newly rated figures, the critic's LoRA adapters are fine-tuned with Direct Preference Optimization on preference pairs ranked by human score. Only the adapters update; the base stays frozen.
+
+CONVERGENCE CRITERION (target, not a measured result). The loop stops when Krippendorff's alpha between critic C and human H on the primary outcome reaches the target threshold of 0.7 on the 30-figure held-out split, sustained across two consecutive fine-tuning rounds.
+
+OUTPUT (right). A calibrated open-weights LoRA critic that extends human-aligned alt-text rating across the long tail of figures with only sparse human oversight.

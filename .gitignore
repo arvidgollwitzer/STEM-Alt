@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+*.aux
+*.log
+*.out
+*.blg
+.pytest_cache/
+.ruff_cache/
+code/outputs/
+.mypy_cache/
+.claude/
+talk/

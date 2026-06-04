@@ -1,0 +1,6 @@
+max_rounds: 5
+prompt_name: P2
+
+convergence:
+  epsilon: 0.1
+  min_rounds: 2

@@ -1,0 +1,34 @@
+# Corpus configuration.
+name: stem_alt
+manifest_path: data/corpus/manifest.csv
+splits_path: data/corpus/splits.json
+
+# Image acquisition, run by pipeline/01_build_corpus.py after the split is
+# written. fetch_images=true materialises the licence-preserving figure files
+# named in the manifest (requires network access to commons.wikimedia.org);
+# set it false to (re)write splits only. fetch_skip_existing avoids
+# re-downloading figures already present, so re-runs are cheap.
+fetch_images: true
+fetch_skip_existing: true
+fetch_width: 1400
+
+# Held-out cell counts, keyed "domain:eth_category". Sum to 30 (the released
+# subset). String keys keep the mapping hashable under YAML/OmegaConf;
+# pipeline/01_build_corpus.py splits them back into (domain, category) cells.
+held_out_target_per_cell:
+  "chemistry:simple": 2
+  "chemistry:linked": 2
+  "chemistry:decorative": 1
+  "chemistry:complex": 3
+  "mathematics_cs:simple": 2
+  "mathematics_cs:linked": 2
+  "mathematics_cs:decorative": 1
+  "mathematics_cs:complex": 3
+  "biology:simple": 1
+  "biology:linked": 2
+  "biology:decorative": 1
+  "biology:complex": 3
+  "physics:simple": 1
+  "physics:linked": 2
+  "physics:decorative": 1
+  "physics:complex": 3
